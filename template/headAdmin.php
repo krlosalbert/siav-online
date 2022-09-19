@@ -2,7 +2,7 @@
     session_start();
     if(empty($_SESSION['active'])){
 
-        header('location:interfazTienda.php');
+        header('location: ../Index/Login.php');
     } 
 
     $num_Orders=0;
@@ -42,7 +42,7 @@
           </a>
           <ul class="dropdown-menu" role="menu">
             <li>
-              <a href="../Users/CreateUserAdmin.php">Nuevo</a>
+              <a href="../Users/FormCreateUserAdmin.php">Nuevo</a>
             </li>
             <li>
               <a href="../Users/ReadUsers.php">Consultar</a>

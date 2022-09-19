@@ -161,7 +161,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLongTitle">Agregar Cantidad</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="close">
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -191,7 +191,7 @@
         <div class="modal-content">
             <div class="modal-header btn btn-warning text-black">
                 <h5 class="modal-title">Editar Productos</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="close">
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>

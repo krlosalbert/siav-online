@@ -18,7 +18,7 @@
                     <a class="nav-link text-info" href="../Index/Login.php">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-info" href="../Users/CreateUsers.php">Registrate</a>
+                    <a class="nav-link text-info" href="../Users/FormCreateUser.php">Registrate</a>
                 </li>             
             </ul>
         </div>
