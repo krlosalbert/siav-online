@@ -1,5 +1,6 @@
 const form = document.getElementById("form");
 
+//llamo los campos por sus id y le asigno variables
 const userCedula = document.getElementById("cedula");
 const userName = document.getElementById("name");
 const userEmail = document.getElementById("email");
@@ -9,6 +10,7 @@ const userPhone = document.getElementById("phone");
 const userPassword = document.getElementById("password");
 const userRepeatPassword = document.getElementById("repeatPassword");
 
+//llamo los respectivos alerts por id y le asigno variables
 const alertSuccess = document.getElementById("alertSuccess");
 const alertDanger = document.getElementById("alertDanger");
 const alertCedula = document.getElementById("alertCedula");
@@ -20,6 +22,7 @@ const alertEmail = document.getElementById("alertEmail");
 const alertPassword = document.getElementById("alertPassword");
 const alertRepeatPassword = document.getElementById("alertRepeatPassword");
 
+// uso las expresiones regulares para poder validar bien las contraseñas
 const regUserCedula = /^\d+$/;
 const regUserName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
 const regUserEmail = /^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/;
@@ -32,11 +35,13 @@ const regUserPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z
     alertSuccess.textContent = "Mensaje enviado con éxito";
 }; */
 
+//declaro la alerta de error por si las contraseñas no cumplen con lo requerido
 const showErrPasword = () => {
     alertDanger.classList.remove("d-none");
     
 };
 
+//asigno la funcion para pintar los respectivos mensajes de error
 const pintarMensajeError = (errores) => {
     errores.forEach((item) => {
         item.tipo.classList.remove("d-none");
@@ -44,10 +49,13 @@ const pintarMensajeError = (errores) => {
     });
 };
 
+//llamo al evento listener para evitar el envio del formulario y hacer la respectiva validacion
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     
     /* alertSuccess.classList.add("d-none"); */
+
+    //declaro el array que me va a contener las diferentes alertas
     const errores = [];
 
     // validar cedula
@@ -91,6 +99,7 @@ form.addEventListener("submit", (e) => {
         userEmail.classList.add("is-valid");
         alertEmail.classList.add("d-none");
     }
+    //pregunto si la variable existe porque depende el formulario se va a usar
     if(userRole){
 
         var role = userRole.options[userRole.selectedIndex].value;
@@ -180,12 +189,16 @@ form.addEventListener("submit", (e) => {
         alertRepeatPassword.classList.add("d-none");
     }
 
+    //pregunto para poder pintar los diferentes mensajes de error
     if (errores.length !== 0) {
         pintarMensajeError(errores);
         return;
     }
 
+    //declaro la variable parametros para poder enviar los datos por metodo POST
     var parametros = "";
+
+    //vuelvo a preguntar si existe la variavle para poder continuar
     if(userRole){
         
         parametros = { 
@@ -211,7 +224,7 @@ form.addEventListener("submit", (e) => {
         };
     };
     
-
+    //utilizo el metodo ajax para poder enviar los datos por metodo POST para la respectiva insersion a la BD
     $.ajax({
         data: parametros,
         url: 'CreateUsers.php',
@@ -235,7 +248,7 @@ form.addEventListener("submit", (e) => {
 });
 
 
-
+//ESTO FUEN UN PASO QUE NO FUNCIONO PERO POR SI LO NECESITO LO DEJE AQUI
 /*  fetch('http://localhost/Proyectos/siavOnline/Users/CreateUsers.php',{
       method: 'POST',
       headers: {

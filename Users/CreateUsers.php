@@ -15,6 +15,7 @@
     $cedula         = $_POST['userCedula'];
     $password       = $_POST['userPassword'];
 
+    //pregunto si existe la variable userRole por el metodo POST
     if(!empty($_POST['userRole'])){
         
         $role = $_POST['userRole'];
@@ -40,6 +41,9 @@
     $data   = "'$name' , '$email', '$addres', $phone, $role, $cedula, '$password'";
     $fields = "$field2, $field3, $field4, $field5, $field6, $field7, $field8";
     
+    //instancio la clase CRUD
     $usu = new CRUD();
+    
+    //llamo al metodo create para hacer la insersion a la BD
     $classCRUD = $usu->Create($tabledb, $fields, $data);
 
