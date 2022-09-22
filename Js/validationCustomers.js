@@ -157,40 +157,60 @@ form.addEventListener("submit", (e) => {
             tipo: alertPassword,
             msg: showErrPasword(),
         });
-    } else {
+        
+        errores.push({
+            tipo: alertPassword,
+            msg: "Ingrese Una Contraseña",
+        });
+        
+        } 
+        else {
+      
         userPassword.classList.remove("is-invalid");
         userPassword.classList.add("is-valid");
         alertPassword.classList.add("d-none");
     }
 
-    // validar confirmacion de contraseña
-    if (userPassword.value != userRepeatPassword.value) {
+    // validar confirmacion de contraseña 
+    if ( userPassword.value != userRepeatPassword.value) {
 
-        userPassword.classList.add("is-invalid");
+        /* userPassword.classList.add("is-invalid"); */
         userRepeatPassword.classList.add("is-invalid");
 
-        errores.push({
-            tipo: alertPassword,
-            msg: "Contraseñas no coinciden",
-        });
-        errores.push({
+            errores.push({
             tipo: alertRepeatPassword,
             msg: "Contraseñas no coinciden",
         });
+        
 
-    } else {
-        userPassword.classList.remove("is-invalid");
-        userPassword.classList.add("is-valid");
-        alertPassword.classList.add("d-none");
-        alertDanger.classList.add("d-none");
+    }else{
 
-        userRepeatPassword.classList.remove("is-invalid");
-        userRepeatPassword.classList.add("is-valid");
-        alertRepeatPassword.classList.add("d-none");
-    }
+        if(userRepeatPassword.value == ""){
+                userRepeatPassword.classList.add("is-invalid");
+    
+                errores.push({
+                tipo: alertRepeatPassword,
+                msg: "Contraseñas no coinciden",
+            }); 
+           
+            }
+            else
+            {
+    
+                userPassword.classList.remove("is-invalid");
+                userPassword.classList.add("is-valid");
+                alertPassword.classList.add("d-none");
+                alertDanger.classList.add("d-none");
+        
+                userRepeatPassword.classList.remove("is-invalid");
+                userRepeatPassword.classList.add("is-valid");
+                alertRepeatPassword.classList.add("d-none");
+            }
+    } 
+    
 
     //pregunto para poder pintar los diferentes mensajes de error
-    if (errores.length !== 0) {
+    if(errores.length !== 0) {
         pintarMensajeError(errores);
         return;
     }

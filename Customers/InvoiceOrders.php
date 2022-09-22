@@ -83,7 +83,7 @@
                             </div>
                             <div class="col-6 col-md-4">
                                 <h5 class="text-center">
-                                    <img class="mr-auto p-3 " width="250px" height= "100px" alt="..." src="http://<?php echo $_SERVER['HTTP_HOST']; ?>/Proyectos/SiavOnline/images/logoSiavOnline.jpeg">
+                                    <img class="mr-auto p-3 " width="250px" height= "100px" alt="..." src="../images/logoSiavOnline.jpeg">
                                 </h5> 
                                 <h5 class="text-center"><b>SiavOnline</b><h5>
                                 <h6 class="mb-2 text-center"><b>Factura No</b> <?php echo " ".$search['FacId'];?></h6>

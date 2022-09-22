@@ -36,7 +36,7 @@
                                 name="cedula" 
                                 id="cedula" 
                                 placeholder="Escribe su documento" 
-                                value ="1127954902"
+                                
                             />
                             <p class="text-danger mb-2 d-none" id="alertCedula"></p>
                         </div>
@@ -48,7 +48,7 @@
                                 name="name" 
                                 id="name" 
                                 placeholder="Escribe su nombre completo"
-                                value ="Carlos Alberto"
+                                
                             />
                             <p class="text-danger mb-2 d-none" id="alertName"></p>
                         </div>
@@ -60,7 +60,7 @@
                                 name="email" 
                                 id="email" 
                                 placeholder="Escribe su Email"
-                                value ="krlosalbert1995@hotmail.com"
+                                
                             />
                             <p class="text-danger mb-2 d-none" id="alertEmail"></p>
                         </div>
@@ -72,7 +72,7 @@
                                 name="phone" 
                                 id="phone"
                                 placeholder="Escribe su telefono"
-                                value ="1127954902"
+                                
                             />
                             <p class="text-danger mb-2 d-none" id="alertPhone"></p>
                         </div>
@@ -86,7 +86,7 @@
                                 name="addres" 
                                 id="addres" 
                                 placeholder="Escribe su Direccion"
-                                value ="barranquilla"
+                                
                             />
                             <p class="text-danger mb-2 d-none" id="alertAddres"></p>
                         </div>
@@ -118,7 +118,8 @@
                                 name="password" 
                                 id="password" 
                                 placeholder="Escribe su contraseña"
-                                value ="Car1127954&"
+                                value=""
+                                
                             />
                             <p class="text-danger mb-2 d-none" id="alertPassword"></p>
                         </div>
@@ -130,7 +131,7 @@
                                 name="repeatPassword"  
                                 id="repeatPassword" 
                                 placeholder="confirmar contraseña"
-                                value ="Car1127954&"
+                                
                             />
                             <p class="text-danger mb-2 d-none" id="alertRepeatPassword"></p>
                         </div>
