@@ -36,7 +36,6 @@
                         name="cedula" 
                         placeholder="Escribe tu numero de documento"
                         id="cedula"
-                        value ="1127954902"
                         />
                         <p class="text-danger mb-2 d-none" id="alertCedula"></p>
                     </div>
@@ -48,7 +47,6 @@
                         name="name" 
                         placeholder="Escribe tu nombre completo"
                         id="name" 
-                        value ="Carlos Alberto"
                         />
                         <p class="text-danger mb-2 d-none" id="alertName"></p>
                     </div>
@@ -60,7 +58,6 @@
                         name="email" 
                         placeholder="Escribe tu Email"
                         id="email"
-                        value ="krlosalbert1995@hotmail.com"
                         />
                         <p class="text-danger mb-2 d-none" id="alertEmail"></p>
                     </div>
@@ -74,7 +71,6 @@
                         name="phone" 
                         placeholder="Escribe tu numero de telefono"
                         id="phone"
-                        value ="3205634878"
                         />
                         <p class="text-danger mb-2 d-none" id="alertPhone"></p>
                     </div>
@@ -97,7 +93,6 @@
                             name="password" 
                             placeholder="Escribe tu contraseña"
                             id="password"
-                            value ="Car1127954&"
                         />
                         <p class="text-danger mb-2 d-none" id="alertPassword"></p>
                     </div>
@@ -111,7 +106,6 @@
                             name="repeatPassword" 
                             placeholder="confirmar contraseña"
                             id="repeatPassword" 
-                            value ="Car1127954&"
                         />
                         <p class="text-danger mb-2 d-none" id="alertRepeatPassword"></p>
                     </div>

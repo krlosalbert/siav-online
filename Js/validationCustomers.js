@@ -174,7 +174,6 @@ form.addEventListener("submit", (e) => {
     // validar confirmacion de contraseña 
     if ( userPassword.value != userRepeatPassword.value) {
 
-        /* userPassword.classList.add("is-invalid"); */
         userRepeatPassword.classList.add("is-invalid");
 
             errores.push({
@@ -186,26 +185,25 @@ form.addEventListener("submit", (e) => {
     }else{
 
         if(userRepeatPassword.value == ""){
-                userRepeatPassword.classList.add("is-invalid");
-    
-                errores.push({
+            
+            userRepeatPassword.classList.add("is-invalid");
+
+            errores.push({
                 tipo: alertRepeatPassword,
                 msg: "Contraseñas no coinciden",
             }); 
            
-            }
-            else
-            {
+        }else{
+
+            userPassword.classList.remove("is-invalid");
+            userPassword.classList.add("is-valid");
+            alertPassword.classList.add("d-none");
+            alertDanger.classList.add("d-none");
     
-                userPassword.classList.remove("is-invalid");
-                userPassword.classList.add("is-valid");
-                alertPassword.classList.add("d-none");
-                alertDanger.classList.add("d-none");
-        
-                userRepeatPassword.classList.remove("is-invalid");
-                userRepeatPassword.classList.add("is-valid");
-                alertRepeatPassword.classList.add("d-none");
-            }
+            userRepeatPassword.classList.remove("is-invalid");
+            userRepeatPassword.classList.add("is-valid");
+            alertRepeatPassword.classList.add("d-none");
+        }
     } 
     
 
